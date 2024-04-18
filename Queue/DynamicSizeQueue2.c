@@ -1,5 +1,5 @@
 
-// Implementation of queues using liinked list...
+// Implementation of queues using linked list...
 #include<stdio.h>
 #include<stdlib.h>
 
@@ -9,7 +9,7 @@ typedef struct node{
     struct node* next;
 }QueueNode;
 
-// insEnd function to enque an element from rear.
+// Enque function to enque an element from rear.
 QueueNode* Enque(QueueNode* q, int val){
     QueueNode* newNode = (QueueNode*)malloc(sizeof(QueueNode));                     
     if(newNode == NULL){
@@ -30,7 +30,7 @@ QueueNode* Enque(QueueNode* q, int val){
     return q;
 }
 
-// Function to dequeue the element from the front.
+// Function to dequeue the element from the front of the queue.
 int Dequeue(QueueNode** q){
     if(*q == NULL){
         printf("Queue Underflow!!\n");
